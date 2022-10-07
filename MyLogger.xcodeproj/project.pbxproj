@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		86E6BECA28EA482300F2CA4D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86E6BEC928EA482300F2CA4D /* main.cpp */; };
+		86E6BEEC28EC7EF900F2CA4D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E6BEEB28EC7EF900F2CA4D /* libsqlite3.tbd */; };
+		86E6BEF228EE2DB800F2CA4D /* LogGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86E6BEED28ECEE4B00F2CA4D /* LogGenerator.cpp */; };
+		86E6BEF528EE4A2B00F2CA4D /* LogDumper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86E6BEF428EE4A2B00F2CA4D /* LogDumper.cpp */; };
+		86E6BEF828EE4F4D00F2CA4D /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 86E6BEF628EE4F4C00F2CA4D /* Logger.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +27,16 @@
 
 /* Begin PBXFileReference section */
 		86E6BEC628EA482300F2CA4D /* MyLogger */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyLogger; sourceTree = BUILT_PRODUCTS_DIR; };
-		86E6BEC928EA482300F2CA4D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		86E6BEE528EBA96B00F2CA4D /* LogMessage.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LogMessage.cpp; sourceTree = "<group>"; };
+		86E6BEE628EBA96B00F2CA4D /* LogMessage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LogMessage.hpp; sourceTree = "<group>"; };
+		86E6BEEB28EC7EF900F2CA4D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		86E6BEED28ECEE4B00F2CA4D /* LogGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogGenerator.cpp; sourceTree = "<group>"; };
+		86E6BEEE28ECEE4B00F2CA4D /* LogGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LogGenerator.hpp; sourceTree = "<group>"; };
+		86E6BEF028ECFF0300F2CA4D /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
+		86E6BEF328EE4A2B00F2CA4D /* LogDumper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LogDumper.hpp; sourceTree = "<group>"; };
+		86E6BEF428EE4A2B00F2CA4D /* LogDumper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogDumper.cpp; sourceTree = "<group>"; };
+		86E6BEF628EE4F4C00F2CA4D /* Logger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
+		86E6BEF928EE520300F2CA4D /* Logger.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Logger.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86E6BEEC28EC7EF900F2CA4D /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +56,7 @@
 			children = (
 				86E6BEC828EA482300F2CA4D /* MyLogger */,
 				86E6BEC728EA482300F2CA4D /* Products */,
+				86E6BEEA28EC7EF900F2CA4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +71,25 @@
 		86E6BEC828EA482300F2CA4D /* MyLogger */ = {
 			isa = PBXGroup;
 			children = (
-				86E6BEC928EA482300F2CA4D /* main.cpp */,
+				86E6BEF928EE520300F2CA4D /* Logger.hpp */,
+				86E6BEF628EE4F4C00F2CA4D /* Logger.cpp */,
+				86E6BEF428EE4A2B00F2CA4D /* LogDumper.cpp */,
+				86E6BEF328EE4A2B00F2CA4D /* LogDumper.hpp */,
+				86E6BEF028ECFF0300F2CA4D /* sqlite3.c */,
+				86E6BEED28ECEE4B00F2CA4D /* LogGenerator.cpp */,
+				86E6BEEE28ECEE4B00F2CA4D /* LogGenerator.hpp */,
+				86E6BEE528EBA96B00F2CA4D /* LogMessage.cpp */,
+				86E6BEE628EBA96B00F2CA4D /* LogMessage.hpp */,
 			);
 			path = MyLogger;
+			sourceTree = "<group>";
+		};
+		86E6BEEA28EC7EF900F2CA4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86E6BEEB28EC7EF900F2CA4D /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86E6BECA28EA482300F2CA4D /* main.cpp in Sources */,
+				86E6BEF228EE2DB800F2CA4D /* LogGenerator.cpp in Sources */,
+				86E6BEF828EE4F4D00F2CA4D /* Logger.cpp in Sources */,
+				86E6BEF528EE4A2B00F2CA4D /* LogDumper.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
